@@ -16,8 +16,7 @@ app.use(cors());
 
 require('./routes/authRoutes')(app);
 require('./routes/routes')(app);
-
-
+require('./routes/dataRoutes')(app);
 
 db.mongoose
   .connect(DB, {
@@ -38,7 +37,8 @@ db.mongoose
 })
 
 app.get("/", (req, res) => {
-    res.json({ message: "Welcome" });
+    // res.json({ message: "Welcome" });
+    res.sendFile(__dirname+"/index.html");
 });
 
 function initialDbSetup() {
