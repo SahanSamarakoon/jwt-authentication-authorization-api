@@ -102,8 +102,8 @@ exports.addPayment = async (req, res) => {
                 port: 465,               // true for 465, false for other ports
                 host: "smtp.gmail.com",
                 auth: {
-                    user: 'sahan.samarakoon.4@gmail.com',
-                    pass: 'hkbpncwvgajuzmqn',
+                    user: '',
+                    pass: '',
                 },
                 secure: true,
             });
@@ -111,8 +111,8 @@ exports.addPayment = async (req, res) => {
             htmlButton =  link+'<input type="submit" name="Pay" value="Pay"/></form>';
         
             const mailData = {
-                from: 'sahan.18@cse.mrt.ac.lk',  // sender address
-                to: 'xprnypnblck@gmail.com',   // list of receivers
+                from: '',  // sender address
+                to: '',   // list of receivers
                 subject: 'Online Payment ',
                 text: 'This is the invoice invoice',
                 html: htmlButton
